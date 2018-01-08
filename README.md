@@ -10,7 +10,7 @@ To unleash hell on a particular service
 - Change Directory to the xerxes-II `$ cd xerxes-II`
 - Build a docker image image`$ sudo docker build . -t xerxes-ii:rc1`
 - In docker-compose.yml define the IP and Port you want to do DDOS on for example.
-```BASH
+```YAML
 version: '2'
 services:
   xerxes-ii-some-service-1:
