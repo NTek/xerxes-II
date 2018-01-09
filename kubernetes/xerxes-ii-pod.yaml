@@ -6,93 +6,153 @@ metadata:
 ---
 ---
 apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: rouge            
+  namespace: demo
+data:
+  IP: "192.168.0.24"
+  PORT:	"80"
+---
+---
+apiVersion: v1
 kind: Pod
 metadata:
-  name: xerxes-ii
+  name: xerxex
   labels:
     app: ddos
   namespace: "demo"
 
 spec:
   containers:
-    - name: rouge-1
-      image: redis
+  - name: rouge-1
+    image: xerxes
     env:
-    - name: IP
-      value: <ip>
-    - name: PORT
-      value: <port>
-
-    - name: rouge-2        
-      image: redis
+      - name: IP
+        valueFrom:
+          configMapKeyRef:
+            name: rouge
+            key: IP
+      - name: PORT
+        valueFrom:
+          configMapKeyRef:
+            name: rouge
+            key: PORT
+  - name: rouge-2 
+    image: xerxes
     env:
-    - name: IP           
-      value: <ip>                        
-    - name: PORT         
-      value: <port>    
-
-    - name: rouge-3        
-      image: redis
+      - name: IP
+        valueFrom:
+          configMapKeyRef:
+            name: rouge
+            key: IP
+      - name: PORT
+        valueFrom:
+          configMapKeyRef:
+            name: rouge
+            key: PORT
+  - name: rouge-3 
+    image: xerxes
     env:
-    - name: IP           
-      value: <ip>                        
-    - name: PORT         
-      value: <port>    
-
-    - name: rouge-4        
-      image: redis
+      - name: IP
+        valueFrom:
+          configMapKeyRef:
+            name: rouge
+            key: IP
+      - name: PORT
+        valueFrom:
+          configMapKeyRef:
+            name: rouge
+            key: PORT
+  - name: rouge-4 
+    image: xerxes
     env:
-    - name: IP           
-      value: <ip>                        
-    - name: PORT         
-      value: <port>    
-
-    - name: rouge-5        
-      image: redis
+      - name: IP
+        valueFrom:
+          configMapKeyRef:
+            name: rouge
+            key: IP
+      - name: PORT
+        valueFrom:
+          configMapKeyRef:
+            name: rouge
+            key: PORT
+  - name: rouge-5 
+    image: xerxes
     env:
-    - name: IP           
-      value: <ip>                        
-    - name: PORT         
-      value: <port>    
-
-    - name: rouge-6        
-      image: redis
+      - name: IP
+        valueFrom:
+          configMapKeyRef:
+            name: rouge
+            key: IP
+      - name: PORT
+        valueFrom:
+          configMapKeyRef:
+            name: rouge
+            key: PORT
+  - name: rouge-6 
+    image: xerxes
     env:
-    - name: IP           
-      value: <ip>                        
-    - name: PORT         
-      value: <port>    
-
-    - name: rouge-7        
-      image: redis
+      - name: IP
+        valueFrom:
+          configMapKeyRef:
+            name: rouge
+            key: IP
+      - name: PORT
+        valueFrom:
+          configMapKeyRef:
+            name: rouge
+            key: PORT
+  - name: rouge-7 
+    image: xerxes
     env:
-    - name: IP           
-      value: <ip>                        
-    - name: PORT         
-      value: <port>    
-
-    - name: rouge-8        
-      image: redis
+      - name: IP
+        valueFrom:
+          configMapKeyRef:
+            name: rouge
+            key: IP
+      - name: PORT
+        valueFrom:
+          configMapKeyRef:
+            name: rouge
+            key: PORT
+  - name: rouge-8 
+    image: xerxes
     env:
-    - name: IP           
-      value: <ip>                        
-    - name: PORT         
-      value: <port>    
-
-    - name: rouge-9
-      image: redis
+      - name: IP
+        valueFrom:
+          configMapKeyRef:
+            name: rouge
+            key: IP
+      - name: PORT
+        valueFrom:
+          configMapKeyRef:
+            name: rouge
+            key: PORT
+  - name: rouge-9
+    image: xerxes
     env:
-    - name: IP           
-      value: <ip>                        
-    - name: PORT         
-      value: <port>    
-
-    - name: rouge-10
-      image: redis
+      - name: IP
+        valueFrom:
+          configMapKeyRef:
+            name: rouge
+            key: IP
+      - name: PORT
+        valueFrom:
+          configMapKeyRef:
+            name: rouge
+            key: PORT
+  - name: rouge-10 
+    image: xerxes
     env:
-    - name: IP           
-      value: <ip>                        
-    - name: PORT         
-      value: <port>    
+      - name: IP
+        valueFrom:
+          configMapKeyRef:
+            name: rouge
+            key: IP
+      - name: PORT
+        valueFrom:
+          configMapKeyRef:
+            name: rouge
+            key: PORT
 ---
-
