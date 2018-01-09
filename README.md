@@ -26,7 +26,7 @@ To unleash hell on a particular service
 version: '2'
 services:
   xerxes-ii-some-service-1:
-    image: xerxes-ii:rc3
+    image: xerxes
     environment:
       - IP=some-service-1-ip-or-hostname
       - PORT=some-service-1-port
