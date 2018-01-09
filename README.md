@@ -1,6 +1,6 @@
 # xerxes-ii
 ---
-XERXES-ii is the most powerful  DDoS tool 
+XERXES-ii is a DDOS tool powered by `containers`. 
 
 ## Usage
 ### DDOS using Docker
@@ -34,8 +34,8 @@ services:
 - Spawn N number of containers for DDOS `$ sudo docker-compose up --scale xerxes-ii-some-service-1=<number-of-nodes-for-DDOS>`
 
 ### Spawning container for dev env
-- Build a docker image image`$ sudo docker build . -t xerxes-ii:rc1`
-- Initiate xerxes-II container `$ sudo docker run -e IP=www.google.com -e PORT=80 -it xerxes-ii:rc3`
+- Build a docker image image`$ sudo docker build . -t xerxes`
+- Initiate xerxes-II container `$ sudo docker run -e IP=www.google.com -e PORT=80 -it xerxes`
 
 ### Spawning process for dev env
 - Compile and build xerxes-II `$ gcc -o xerxes-II xerxes-II.c`
