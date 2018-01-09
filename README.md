@@ -13,7 +13,7 @@ To unleash hell on a particular service
 - Compile and build xerxes-II `$ gcc -o xerxes-II xerxes-II.c`
 
 ### Build image
-- Build a docker image image`$ sudo docker build . -t xerxes-ii`
+- Build a docker image image`$ sudo docker build . -t xerxes`
 
 ### DDOS using Kubernetes
 *NOTE: Kubernetes is required to be setup on the host*
@@ -32,13 +32,13 @@ services:
       - PORT=some-service-1-port
 
   xerxes-ii-some-service-2:
-    image: xerxes-ii:rc3
+    image: xerxes
     environment:
       - IP=some-service-2-ip-or-hostname
       - PORT=some-service-2-port
 
   xerxes-ii-some-service-3:
-    image: xerxes-ii:rc3
+    image: xerxes
     environment:
       - IP=some-service-3-ip-or-hostname
       - PORT=some-service-3-port
