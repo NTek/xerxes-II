@@ -2,7 +2,7 @@ version: '2'
 
 services:
   xerxes-ii:
-    image: xerxes-ii:rc3
+    image: xerxes
     environment:
          #<IP-or-Hostname>
       - IP=192.168.1.1
